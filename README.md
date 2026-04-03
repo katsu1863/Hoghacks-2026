@@ -1,1 +1,1 @@
-# hoghacks-2026
+# Hoghacks-2026
