@@ -46,21 +46,24 @@ async function search() {
         })
     });
 
-    data = await res.json();
+    let data = await res.json();
     console.log(data);
 
     displayArtists(data.artists);
 }
 
 function displayArtists(artists) {
+    document.getElementById("searchResults").style.display = "block";
+    document.getElementById("featuredArtists").style.display = "none";
+
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = artists.map(artist => `
         <div class="artist-card">
             <div class = "artist-info">
                 <h2>${artist.artist_name}</h2>
-                <p>Genre: ${artist.location_city}, ${artist.location_region}</p>
+                <p>Genre:${artist.music_genre}</p>
+                <p>${artist.location_city}, ${artist.location_region}</p>
                 <p>${artist.insta_handle}</p>
-                <span class="genre-badge">${artist.music_genre}</span>
             </div>
         </div>
     `).join("");
