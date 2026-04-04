@@ -6,5 +6,5 @@ Shirley Lin
 Shayne Thompson  
 Braden Lemna  
 Kamila Cudzich  
-Elizabeth Johnson  
+Elisabeth Johnson  
 Cooper Claussen
