@@ -1,11 +1,10 @@
 document.getElementById("addArtist").addEventListener("click", function() {
     var name = document.getElementById("Name").value;
-    var location = document.getElementById("Location").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
     var genre = document.getElementById("Genre").value;
-    var description = document.getElementById("Description").value;
     var image = document.getElementById("Image").value;
     var socials = document.getElementById("Socials").value;
-    var date = document.getElementById("Dates").value;
 
 
     fetch("addArtist.php", {
@@ -14,15 +13,14 @@ document.getElementById("addArtist").addEventListener("click", function() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            name: name,
-            longitude: getLongitude(location),
-            latitude: getLatitude(location),
-            location: location,
-            genre: genre,
-            description: description,
-            image: image,
-            socials: socials,
-            date: date
+            artist_name: name,
+            longitude: getLongitude(city),
+            latitude: getLatitude(city),
+            location_city: city,
+            location_region: state,
+            music_genre: genre,
+            image_src: image,
+            insta_handle: socials,
 
         })
     });
@@ -30,10 +28,9 @@ document.getElementById("addArtist").addEventListener("click", function() {
     name.value = "";
     longitude.value = "";
     latitude.value = "";
-    location.value = "";
+    city.value = "";
+    state.value = "";
     genre.value = "";
-    description.value = "";
     image.value = "";
     socials.value = "";
-    date.value = "";
 });
