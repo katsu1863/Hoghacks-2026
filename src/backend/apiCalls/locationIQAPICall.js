@@ -7,7 +7,7 @@
 
 const apiKey = 'null' // Input server side to prevent unwanted use
 
-async function autoCompleteCity(input) // Calls LocationIQ api to get the autocomplete suggestions for the given input
+export async function autoCompleteCity(input) // Calls LocationIQ api to get the autocomplete suggestions for the given input
 {
     const url = 'https://us1.locationiq.com/v1/autocomplete.php?key='+ apiKey + '&format=json&q=' + encodeURIComponent(input) + '&limit=3&dedupe=1&'
 
@@ -20,7 +20,7 @@ async function autoCompleteCity(input) // Calls LocationIQ api to get the autoco
     return suggestions[0] // Return the first suggestion
 }
 
-async function getLongitude(city) // Calls LocationIQ api to get the longitude of the given city
+export async function getLongitude(city) // Calls LocationIQ api to get the longitude of the given city
 {
     const url = 'https://us1.locationiq.com/v1/search.php?key='+ apiKey + '&format=json&q=' + encodeURIComponent(city)
 
@@ -33,7 +33,7 @@ async function getLongitude(city) // Calls LocationIQ api to get the longitude o
     return longitude
 }
 
-async function getLatitude(city) // Calls LocationIQ api to get the latitude of the given city
+export async function getLatitude(city) // Calls LocationIQ api to get the latitude of the given city
 {
     const url = 'https://us1.locationiq.com/v1/search.php?key='+ apiKey + '&format=json&q=' + encodeURIComponent(city)
 
@@ -46,7 +46,7 @@ async function getLatitude(city) // Calls LocationIQ api to get the latitude of 
     return latitude
 }
 
-async function getLocation(latitude, longitude) // Calls LocationIQ api to get the location name of the given longitude and latitude
+export async function getLocation(latitude, longitude) // Calls LocationIQ api to get the location name of the given longitude and latitude
 {
     const url = 'https://us1.locationiq.com/v1/reverse.php?key='+ apiKey + '&format=json&lat=' + encodeURIComponent(latitude) + '&lon=' + encodeURIComponent(longitude) + '&format=json&'
 

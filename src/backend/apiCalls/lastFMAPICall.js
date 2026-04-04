@@ -4,7 +4,7 @@
 // Author: Braden Lemna
 //--------------------------------------------
 
-async function getGenre(artist) // Calls the LastFM api to get the genre of the artist
+export async function getGenre(artist) // Calls the LastFM api to get the genre of the artist
 {
     const apiKey = 'null' // Input server side to prevent unwanted use
     const url = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist='+ artist + '&api_key=' + apiKey + '&format=json'

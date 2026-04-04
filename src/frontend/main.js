@@ -1,3 +1,7 @@
+import { setUserLocation, calculateDistance, testInRange } from "../backend/locationHandling.js";
+import { autoCompleteCity, getLatitude, getLongitude, getLocation } from "../backend/apiCalls/locationIQAPICall.js";
+import { getGenre } from "../backend/apiCalls/lastFMAPICall.js";
+
 /*
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -45,13 +49,34 @@ function search() {
     });
 }
 
+// Global variables
+let map = null; // Leaflet map instance (Needed to access in multiple functions)
+let userMarker = null; // User location circle marker (Needed to bring the marker to the front after adding the radius circle)
+
 // Store user location
 let userLatitude = null;
 let userLongitude = null;
 
+// Getter functions for user location
+function getUserLatitude() {
+  return userLatitude;
+}
+
+function getUserLongitude() {
+  return userLongitude;
+}
+
 navigator.geolocation.getCurrentPosition(function(position) {
   userLatitude = position.coords.latitude;
   userLongitude = position.coords.longitude;
+
+  setUserLocation(userLongitude, userLatitude);
+  console.log("User location set to:", userLatitude, userLongitude);
+  
+  // Initialize map after geolocation is ready
+  initializeMap();
+  updateRadiusCircle(10);
+  userMarker.bringToFront(); // Bring circle marker to the front
 });
 
 
@@ -163,3 +188,42 @@ function sizeleave() {
 // function distancelеave() {
 //     document.getElementById("distancefilter").style.display = "none";
 // }
+
+// Initialize map with user location
+function initializeMap() {
+    map = L.map('map').setView([getUserLatitude(), getUserLongitude()], 11);
+
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+    }).addTo(map);
+
+    userMarker = L.circleMarker([getUserLatitude(), getUserLongitude()], {
+        radius: 8,
+        fillColor: "#007AFF",
+        color: "#fff",
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.8
+    }).addTo(map);
+}
+
+// Initialize radius circle
+function updateRadiusCircle(radius) {
+    if (window.radiusCircle) {
+        window.radiusCircle.setRadius(radius * 1609.34); // Convert miles to meters
+    } 
+    else
+    {
+        window.radiusCircle = L.circle([getUserLatitude(), getUserLongitude()], {
+            radius: radius * 1609.34, // Convert miles to meters
+            color: '#000000',
+            weight: 1,
+            fillColor: '#ff0000',
+            fillOpacity: 0.1
+        }).addTo(map);
+    }
+    
+    // Zoom map to fit the radius circle
+    map.fitBounds(window.radiusCircle.getBounds());
+}
