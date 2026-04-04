@@ -57,6 +57,13 @@ input {
     gap: 5px;
 }
 
+#nav {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-right: 3em;
+}
+
 /* This seperates the search button and the filter button so that they're able to be displayed correctly. */
 .searchEngineTop {
     margin-top: -1.5em;
@@ -71,12 +78,22 @@ input {
     position: relative;
 }
 
-#loginButton {
+.navButton {
     align-items: right;
     width: 4.5em;
     height: 2em;
-    margin-left: 75em;
+    /* margin-left: 75em; */
     margin-bottom: -3em;
+}
+
+.navButton#addArtist {
+    width: 10em;
+}
+
+#searchButtonImg {
+    width: 3em;
+    height: 3em;
+    margin-left: 3px;
 }
 
 #searchButton {
