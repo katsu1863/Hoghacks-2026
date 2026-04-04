@@ -21,6 +21,11 @@ label {
     font-weight: bold;
 }
 
+#addBandButton {
+    width: 4em;
+    height: 2em;
+}
+
 h1, h2, h3 {
     font-family: "Concert One";
 }
