@@ -3,8 +3,6 @@ document.getElementById("login").addEventListener("click", function() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    let accepted = false;
-
     fetch("../backend/db-api/verify_user.php", {
         method: "POST",
         headers: {
