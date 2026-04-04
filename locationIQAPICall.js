@@ -1,6 +1,7 @@
 //--------------------------------------------
 // LocationIQ API Call Functions
-// These functions call the LocationIQ API to get the autocomplete suggestions, longitude, and latitude for a given city
+// These functions call the LocationIQ API to get the autocomplete suggestions, longitude, and latitude, for a given city
+// It also has a function to get the location name for a given longitude and latitude
 // Author: Braden Lemna
 //--------------------------------------------
 
