@@ -8,7 +8,22 @@ Description: This is the homepage for our Hackathon project, MyScene. MyScene's 
 <title>MyScene</title>
 
 <header>
-    <h1 class="logo">MyScene</h1>
+    <div id="nav">
+        <button style="width: 6em;" id="addArtistButton" class="navButton">
+            <a href="addArtist.html" >Add Artist</a>
+        </button>
+
+        <button id="loginButton" class="navButton">
+            <a href="login.html">Log In</a>
+        </button>
+    </div>
+    </header>
+
+
+    <!-- <h1 class="logo">MyScene</h1> -->
+    <a href="main.html">
+        <img src="Icons/mySceneLogo.png" class="logo">
+    </a>
 
     <!-- This is the search engine. -->
     <form class="searchEngine"> 
@@ -16,7 +31,7 @@ Description: This is the homepage for our Hackathon project, MyScene. MyScene's 
         <!-- Top of the search bar -->
         <div class="searchEngineTop">
             <input for="searchEngine" id="homeSearch">
-            <button id="searchButton"><img src="Icons/search-circle-svgrepo-com.svg" id="searchButton"></button>
+            <button id="searchButton"><img src="Icons/search-circle-svgrepo-com.svg" id="searchButtonImg"></button>
         </div>
 
         <!-- Bottom of the search bar -->
