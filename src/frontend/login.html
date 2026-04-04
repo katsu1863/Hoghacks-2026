@@ -1,15 +1,20 @@
 <!--
-File Name: logintest.html
+File Name: login.html
 Description: Login page for MyScene. Takes username and password, verifies with backend, and redirects to main.html on success.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel="stylesheet" href="style.css"></head>
+<title>Login - MyScene</title>
+
+<!-- <head>
+    <head><link rel="stylesheet" href="style.css"></head>
+    <title>MyScene</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login - MyScene</title>
+    
     <style>
         .login-container {
             display: flex;
@@ -77,11 +82,14 @@ Description: Login page for MyScene. Takes username and password, verifies with 
             background-color: #45a049;
         }
     </style>
-</head>
+</head> -->
+<header>
+    <a href="main.html">
+        <img src="Icons/mySceneLogo.png" class="logo">
+    </a>
+</header>
+
 <body>
-    <header>
-        <h1 class="logo">MyScene</h1>
-    </header>
 
     <div class="login-container">
         <div class="login-box">
@@ -102,10 +110,11 @@ Description: Login page for MyScene. Takes username and password, verifies with 
         </div>
     </div>
 
-    <footer>
-        <p>Created by Theta Protocol, Hoghacks Hackathon 2026 Team.</p>
-    </footer>
-
     <script src="login.js"></script>
 </body>
+
+
+<footer>
+    <p>Created by Theta Protocol, Hoghacks Hackathon 2026 Team.</p>
+</footer>
 </html>
