@@ -4,13 +4,29 @@ Author: Shayne Thompson, @whisperingcoder (Github)
 Description: This file will connect to all html files to create a universal style across the website.  
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 header {
     margin-top: 3em;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, label {
     color: #CDD3D5;
     
+}
+
+label {
+    font-size: large;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: "Concert One";
+}
+
+p {
+    font-family: "Open Sans"
 }
 
 a, button {
@@ -57,11 +73,15 @@ input {
     gap: 5px;
 }
 
-#nav {
+.nav {
     display: flex;
     justify-content: right;
     gap: 10px;
     margin-right: 3em;
+}
+
+#addArtistNav {
+    /* margin-top: 10px; */
 }
 
 /* This seperates the search button and the filter button so that they're able to be displayed correctly. */
@@ -329,4 +349,25 @@ footer {
         
         #login:hover {
             background-color: #51b1c9;
+        }
+        
+        #bandSubmission {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        #bandSubmission input {
+            width: 25em;
+            height: 2.5em;
+            border-radius: 10px;
+            
+        }
+
+        .logo#smallLogo {
+            width: 7em;
+            height: 5.65em;
+            margin: 0;
+            padding-left: 30px;
         }
