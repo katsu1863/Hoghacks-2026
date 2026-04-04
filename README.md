@@ -7,3 +7,4 @@ Shayne Thompson
 Braden Lemna  
 Kamila Cudzich  
 Elizabeth Johnson
+Cooper Claussen
