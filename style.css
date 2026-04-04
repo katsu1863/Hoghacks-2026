@@ -113,7 +113,8 @@ input {
 }
 
 .artistBox h3, p {
-    color: #CDD3D5;
+    color: #ffffffd5;
+    line-height: 1px;
 }
 
 .artistBox:hover {
@@ -126,8 +127,16 @@ input {
     font-size: 4rem;
 }
 
+.artistImg {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    height: 11em;
+    width: 9em;
+}
+
 footer {
     margin: 1em;
-    margin-top: 5em;
+    margin-top: 7em;
+    margin-bottom: 2em;
 }
 
