@@ -44,3 +44,16 @@ async function getLatitude(city) // Calls LocationIQ api to get the latitude of 
 
     return latitude
 }
+
+async function getLocation(latitude, longitude) // Calls LocationIQ api to get the location name of the given longitude and latitude
+{
+    const url = 'https://us1.locationiq.com/v1/reverse.php?key='+ apiKey + '&format=json&lat=' + encodeURIComponent(latitude) + '&lon=' + encodeURIComponent(longitude) + '&format=json&'
+
+    const response = await fetch(url)
+    const data = await response.json()
+
+    const location = data.display_name
+    console.log('Location for', longitude, latitude, ':', location)
+
+    return location
+}
