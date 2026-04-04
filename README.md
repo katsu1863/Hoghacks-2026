@@ -23,4 +23,5 @@ cd HogHacks-2026
 ```
 - Run `./install.sh` to install necessary packages
 - Start a local PHP web server by running `php -S localhost:8000` from the home directory of HogHacks-2026
-- Navigate to `http://localhost:8000/src/frontend/login.html` on a Web browser
+- Navigate to `http://localhost:8000/src/frontend/login.html` on a Web browser  
+*The website relies on multiple API Calls that require API keys*
