@@ -1,3 +1,9 @@
+//--------------------------------------------
+// LocationIQ API Call Functions
+// These functions call the LocationIQ API to get the autocomplete suggestions, longitude, and latitude for a given city
+// Author: Braden Lemna
+//--------------------------------------------
+
 const apiKey = 'null' // Input server side to prevent unwanted use
 
 async function autoCompleteCity(input) // Calls LocationIQ api to get the autocomplete suggestions for the given input
