@@ -33,7 +33,7 @@ async function search() {
     let input = document.getElementById("homeSearch").value;
     let genre = await getGenre(input);
     alert(genre);
-    fetch("../backend/db-api/search_genre.php",{
+    const res = await fetch("../backend/db-api/search_genre.php",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,27 @@ async function search() {
             //distances: distanceList
         })
     });
+
+    data = await res.json();
+    console.log(data);
+
+    displayArtists(data.artists);
 }
+
+function displayArtists(artists) {
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = artists.map(artist => `
+        <div class="artist-card">
+            <div class = "artist-info">
+                <h2>${artist.artist_name}</h2>
+                <p>Genre: ${artist.location_city}, ${artist.location_region}</p>
+                <p>${artist.insta_handle}</p>
+                <span class="genre-badge">${artist.music_genre}</span>
+            </div>
+        </div>
+    `).join("");
+}
+
 
 // Global variables
 let map = null; // Leaflet map instance (Needed to access in multiple functions)

@@ -435,6 +435,30 @@ footer {
     line-height: 25px;
 }
 
+.artistCard {
+    border: 1 px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+.artistCard h2 {
+    margin: 0 0 4px;
+    font-size: 16 px;
+
+}
+
+.artistCard p {
+    margin: 0 0 4px;
+    font-size: 13 px;
+    color: #666;
+
+}
+
 
 #artistButtons button {
     width: 9em;
