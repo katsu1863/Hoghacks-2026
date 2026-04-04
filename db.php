@@ -6,7 +6,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Validate that required variables are present
-$dotenv->required(["DB_HOST", "DB_USER", "DB_PASSWORD", "DB_NAME"]);
+$dotenv->required(["DB_HOST", "DB_NAME", "DB_USERNAME", "DB_PASSWORD"]);
 
 // Access variables via $_ENV or getenv()
 $conn = new mysqli(
