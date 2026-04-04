@@ -32,11 +32,11 @@ INSERT INTO Users VALUES ("kcudzich", "45678");
 INSERT INTO Users VALUES ("kitkat", "56789");
 INSERT INTO Users VALUES ("katsu18", "67890");
 
-INSERT INTO Artists VALUES ("The Belladonnas", "Fayetteville", "AR", NULL, NULL, "Rock", "@thebelladonnasband", "belladonnas.jpg");
-INSERT INTO Artists VALUES ("Mount Comfort", "Fayetteville", "AR", NULL, NULL, "Indie", "@mt.comfort", "belladonnas.jpg");
-INSERT INTO Artists VALUES ("Echo Eden and the Dreamers", "Fayetteville", "AR", NULL, NULL, "Punk", "@echoedenandthedreamers", "Echo Eden and the Dreamers.png");
-INSERT INTO Artists VALUES ("Keathley", "Oklahoma City", "OK", NULL, NULL, "Indie", "@keathley_burningbras", "Echo Eden and the Dreamers.png");
-INSERT INTO Artists VALUES ("Resting", "Springdale", "AR", NULL, NULL, "Alternative Rock", "@resting.zzz", "Echo Eden and the Dreamers.png");
-INSERT INTO Artists VALUES ("Ozark Riviera", "Fayetteville", "AR", NULL, NULL, "Indie", "@ozark.riviera", NULL);
-INSERT INTO Artists VALUES ("Burn Absolute", "Tampa", "FL", NULL, NULL, "Metal", "@burnabsolute", "burnabsolute.png");
-INSERT INTO Artists VALUES ("Dawn of Ascension", "El Dorado", "AR", NULL, NULL, "Metal", "@dawnofascensionband", "dawnofascensionband.png";)
+INSERT INTO Artists VALUES (NULL, "The Belladonnas", "Fayetteville", "AR", NULL, NULL, "Rock", "@thebelladonnasband", "belladonnas.jpg");
+INSERT INTO Artists VALUES (NULL, "Mount Comfort", "Fayetteville", "AR", NULL, NULL, "Indie", "@mt.comfort", "belladonnas.jpg");
+INSERT INTO Artists VALUES (NULL, "Echo Eden and the Dreamers", "Fayetteville", "AR", NULL, NULL, "Punk", "@echoedenandthedreamers", "Echo Eden and the Dreamers.png");
+INSERT INTO Artists VALUES (NULL, "Keathley", "Oklahoma City", "OK", NULL, NULL, "Indie", "@keathley_burningbras", "Echo Eden and the Dreamers.png");
+INSERT INTO Artists VALUES (NULL, "Resting", "Springdale", "AR", NULL, NULL, "Alternative Rock", "@resting.zzz", "Echo Eden and the Dreamers.png");
+INSERT INTO Artists VALUES (NULL, "Ozark Riviera", "Fayetteville", "AR", NULL, NULL, "Indie", "@ozark.riviera", NULL);
+INSERT INTO Artists VALUES (NULL, "Burn Absolute", "Tampa", "FL", NULL, NULL, "Metal", "@burnabsolute", "burnabsolute.png");
+INSERT INTO Artists VALUES (NULL, "Dawn of Ascension", "El Dorado", "AR", NULL, NULL, "Metal", "@dawnofascensionband", "dawnofascensionband.png");
