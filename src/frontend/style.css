@@ -1,0 +1,143 @@
+/* 
+File Name: style.css
+Author: Shayne Thompson, @whisperingcoder (Github)
+Description: This file will connect to all html files to create a universal style across the website.  
+*/
+
+header {
+    margin-top: 3em;
+}
+h1, h2, h3, p {
+    color: #CDD3D5;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #75B8C8;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 0px;
+    background-color: #77CBB9;
+    border-radius: 3em;
+}
+
+input {
+    border-radius: 3em;
+    border: 0px;
+    background-color: #CDD3D5;
+}
+
+/* Creates a flex to diplay the search bar correctly. */
+.searchEngine {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+/* This seperates the search button and the filter button so that they're able to be displayed correctly. */
+.searchEngineTop {
+    margin-top: -1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchEngineBot {
+    display: flex;
+    justify-content: center;
+}
+
+#searchButton {
+    width: 3em;
+    height: 3em;
+    margin-left: 3px;
+}
+
+#filterButton {
+    width: 5em;
+    height: 2em;
+}
+
+#filterOptions {
+    margin-left: 3px;
+    border: 0.5px solid;
+    width: 12em;
+    height: 15em;
+}
+
+#homeSearch {
+    width: 60em;
+    height: 3em;
+}
+
+#featuredArtists {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+#row1, #row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.artistBox {
+    width: 16.65em;
+    height: 16.65em;
+    border: 0px;
+    text-align: center;
+    background-color: #77CBB9;
+    border-radius: 2em;
+}
+
+.artistBox h3, p {
+    color: #ffffffd5;
+    line-height: 1px;
+}
+
+.artistBox:hover {
+    transform: translateY(-4px);
+    transform: translateX(4px);
+    background-color: #81a89d;
+  }
+
+.logo {
+    font-size: 4rem;
+}
+
+.artistImg {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    height: 11em;
+    width: 9em;
+}
+
+footer {
+    margin: 1em;
+    margin-top: 7em;
+    margin-bottom: 2em;
+}
+
