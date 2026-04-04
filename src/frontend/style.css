@@ -7,8 +7,15 @@ Description: This file will connect to all html files to create a universal styl
 header {
     margin-top: 3em;
 }
+
 h1, h2, h3, p {
     color: #CDD3D5;
+    
+}
+
+a, button {
+    text-decoration: none;
+    color: #ffffffd5;
 }
 
 h1 {
@@ -62,6 +69,14 @@ input {
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+#loginButton {
+    align-items: right;
+    width: 4.5em;
+    height: 2em;
+    margin-left: 75em;
+    margin-bottom: -3em;
 }
 
 #searchButton {
@@ -133,7 +148,12 @@ input {
   }
 
 .logo {
-    font-size: 4rem;
+    /* font-size: 4rem; */
+    width: 18em;
+    height: 16.65em;
+    display: block;
+    margin: auto;
+    margin-bottom: 2px;
 }
 
 .artistImg {
