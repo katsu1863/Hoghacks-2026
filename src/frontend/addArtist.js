@@ -7,8 +7,6 @@ document.getElementById("addBandButton").addEventListener("click", function() {
     // let image = document.getElementById("bandImage").value;
     let socials = document.getElementById("instagramHandle").value;
 
-    alert(name + " " + city + " " + state + " " + genre + " " + socials);
-
     fetch("../backend/db-api/add_artist.php", {
         method: "POST",
         headers: {
@@ -25,14 +23,12 @@ document.getElementById("addBandButton").addEventListener("click", function() {
             insta_handle: socials,
 
         })
-    });
-
-    name.value = "";
-    // longitude.value = "";
-    // latitude.value = "";
-    city.value = "";
-    state.value = "";
-    genre.value = "";
-    // image.value = "";
-    socials.value = "";
+    }).then(response => response.json())
+      .then(data => {
+          if (data.success) {
+                alert("Artist was successfully added to the database.")
+          } else {
+                alert("Artist name, city, state, and music genre must be filled in.");
+          }
+      });
 });

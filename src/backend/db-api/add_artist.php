@@ -38,11 +38,7 @@ $stmt->bind_param("ssssss",
 );
 
 if ($stmt->execute()) {
-    echo json_encode([
-        "success"     => true,
-        "id"          => $conn->insert_id,
-        "artist_name" => $artist_name
-    ]);
+    echo json_encode(["success" => true]);
 } else {
     http_response_code(500);
     echo json_encode(["error" => $stmt->error]);
