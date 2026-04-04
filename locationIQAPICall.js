@@ -1,5 +1,4 @@
 const apiKey = 'null' // Input server side to prevent unwanted use
-let test = autoCompleteCity("San Fran")
 
 async function autoCompleteCity(input) // Calls LocationIQ api to get the autocomplete suggestions for the given input
 {
