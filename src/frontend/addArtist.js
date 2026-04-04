@@ -1,10 +1,11 @@
 document.getElementById("addBandButton").addEventListener("click", function() {
-    var name = document.getElementById("bandName").value;
-    var city = document.getElementById("bandCity").value;
-    var state = document.getElementById("bandState").value;
-    var genre = document.getElementById("bandGenre").value;
-    // var image = document.getElementById("bandImage").value;
-    var socials = document.getElementById("instagramHandle").value;
+    //alert("Button clicked!");
+    let name = document.getElementById("bandName").value;
+    let city = document.getElementById("bandCity").value;
+    let state = document.getElementById("bandState").value;
+    let genre = document.getElementById("bandGenre").value;
+    // let image = document.getElementById("bandImage").value;
+    let socials = document.getElementById("instagramHandle").value;
 
     alert(name + " " + city + " " + state + " " + genre + " " + socials);
 
@@ -27,8 +28,8 @@ document.getElementById("addBandButton").addEventListener("click", function() {
     });
 
     name.value = "";
-    longitude.value = "";
-    latitude.value = "";
+    // longitude.value = "";
+    // latitude.value = "";
     city.value = "";
     state.value = "";
     genre.value = "";
