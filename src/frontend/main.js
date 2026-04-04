@@ -55,6 +55,7 @@ async function search() {
 function displayArtists(artists) {
     document.getElementById("searchResults").style.display = "block";
     document.getElementById("featuredArtists").style.display = "none";
+    document.getElementById("map").style.display = "none";
 
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = artists.map(artist => `
