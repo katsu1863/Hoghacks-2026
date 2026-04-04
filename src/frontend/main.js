@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 
 document.getElementById("searchButton").addEventListener("click", search);
-function search() {
+async function search() {
     //alert("searching");
     console.log("searching");
     /*var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -31,18 +31,16 @@ function search() {
     });*/
     
     let input = document.getElementById("homeSearch").value;
-    alert(input);
-    fetch("uk.php",{
+    let genre = await getGenre(input);
+    alert(genre);
+    fetch("../backend/db-api/search_genre.php",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
 
         body: JSON.stringify({
-            genres: genreList,
-            dates: datesList,
-            sizes: sizeList,
-            input: input
+            music_genre: genre
             //prevconcerts: prevconvertList,
             //distances: distanceList
         })
