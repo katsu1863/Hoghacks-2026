@@ -61,6 +61,7 @@ input {
 .searchEngineBot {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 #searchButton {
@@ -76,9 +77,16 @@ input {
 
 #filterOptions {
     margin-left: 3px;
-    border: 0.5px solid;
+    border: 0;
     width: 12em;
     height: 15em;
+    position: absolute;
+    z-index: 9999;
+    top: 0%;
+    left: 100%;
+
+    background-color: #81a89d;
+    border-radius: 1em;
 }
 
 #homeSearch {
