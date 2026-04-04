@@ -193,14 +193,14 @@ function sizeleave() {
 function initializeMap() {
     map = L.map('map').setView([getUserLatitude(), getUserLongitude()], 11);
 
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
     }).addTo(map);
 
     userMarker = L.circleMarker([getUserLatitude(), getUserLongitude()], {
         radius: 8,
-        fillColor: "#007AFF",
+        fillColor: "#220C10",
         color: "#fff",
         weight: 2,
         opacity: 1,
@@ -219,7 +219,7 @@ function updateRadiusCircle(radius) {
             radius: radius * 1609.34, // Convert miles to meters
             color: '#000000',
             weight: 1,
-            fillColor: '#ff0000',
+            fillColor: '#75B8C8',
             fillOpacity: 0.1
         }).addTo(map);
     }
