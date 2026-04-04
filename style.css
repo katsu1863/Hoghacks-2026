@@ -27,10 +27,11 @@ button {
     background-color: white;
     border: 0px;
     background-color: #77CBB9;
+    border-radius: 3em;
 }
 
 input {
-    border-radius: 0;
+    border-radius: 3em;
     border: 0px;
     background-color: #CDD3D5;
 }
@@ -46,7 +47,7 @@ input {
     align-items: flex-start;
     justify-content: center;
 
-    gap: 3px;
+    gap: 5px;
 }
 
 /* This seperates the search button and the filter button so that they're able to be displayed correctly. */
@@ -109,7 +110,7 @@ input {
     border: 0px;
     text-align: center;
     background-color: #77CBB9;
-    /* text */
+    border-radius: 2em;
 }
 
 .artistBox h3, p {
