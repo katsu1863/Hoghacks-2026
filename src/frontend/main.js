@@ -4,6 +4,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 */
 
+document.getElementById("searchButton").addEventListener("click", search);
+function search() {
+    //alert("searching");
+    console.log("searching");
+    /*var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function(checkbox) {
+        if (!checkbox.checked){
+            return;
+        }
+        //add to list
+        if(genreTrue){
+        //checkbox.name? or checkbox.value? or checkbox.id?
+            addGenre(checkbox.id);
+        }
+        if(datesTrue){
+            addDates(checkbox.id);
+        }
+        if(sizeTrue){
+            addSize(checkbox.id);
+        }
+    });*/
+    
+    let input = document.getElementById("homeSearch").value;
+    alert(input);
+    fetch("uk.php",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+            genres: genreList,
+            dates: datesList,
+            sizes: sizeList,
+            input: input
+            //prevconcerts: prevconvertList,
+            //distances: distanceList
+        })
+    });
+}
+
 // Store user location
 let userLatitude = null;
 let userLongitude = null;
@@ -122,47 +163,3 @@ function sizeleave() {
 // function distancelеave() {
 //     document.getElementById("distancefilter").style.display = "none";
 // }
-document.getElementById("searchButton").addEventListener("click", search);
-function search() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(checkbox) {
-        if (!checkbox.checked){
-            return;
-        }
-        //add to list
-        if(genreTrue){
-        //checkbox.name? or checkbox.value? or checkbox.id?
-            addGenre(checkbox.id);
-        }
-        if(datesTrue){
-            addDates(checkbox.id);
-        }
-        if(sizeTrue){
-            addSize(checkbox.id);
-        }
-        /*if(prevconcertTrue){
-            addPrevconvert(checkbox.id);
-        }
-        else if(distanceTrue){
-            addDistance(checkbox.id);
-        }*/
-    });
-    
-    let input = document.getElementById("searchEngine").value;
-    alert(input);
-    fetch("uk.php",{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({
-            genres: genreList,
-            dates: datesList,
-            sizes: sizeList,
-            input: input
-            //prevconcerts: prevconvertList,
-            //distances: distanceList
-        })
-    });
-}
