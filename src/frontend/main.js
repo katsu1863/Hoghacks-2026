@@ -190,7 +190,8 @@ function sizeleave() {
 // }
 
 // Initialize map with user location
-function initializeMap() {
+function initializeMap()
+{
     map = L.map('map').setView([getUserLatitude(), getUserLongitude()], 11);
 
     L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png', {
@@ -209,7 +210,8 @@ function initializeMap() {
 }
 
 // Initialize radius circle
-function updateRadiusCircle(radius) {
+function updateRadiusCircle(radius)
+{
     if (window.radiusCircle) {
         window.radiusCircle.setRadius(radius * 1609.34); // Convert miles to meters
     } 
@@ -226,4 +228,11 @@ function updateRadiusCircle(radius) {
     
     // Zoom map to fit the radius circle
     map.fitBounds(window.radiusCircle.getBounds());
+}
+
+// Add map marker for concert location
+function addMarker(latitude, longitude, concertInfo)
+{
+    const marker = L.marker([latitude, longitude]).addTo(map);
+    marker.bindPopup(concertInfo);
 }
