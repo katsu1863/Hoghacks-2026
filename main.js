@@ -149,7 +149,7 @@ function search() {
     });
     
     let input = document.getElementById("searchEngine").value;
-
+    alert(input);
     fetch("uk.php",{
         method: "POST",
         headers: {

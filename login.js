@@ -5,7 +5,7 @@ document.getElementById("login").addEventListener("click", function() {
 
     let accepted = false;
 
-    fetch("verify_user.php", {
+    fetch("Database/api/verify_user.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
