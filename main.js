@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 */
+
+// Store user location
+let userLatitude = null;
+let userLongitude = null;
+
+navigator.geolocation.getCurrentPosition(function(position) {
+  userLatitude = position.coords.latitude;
+  userLongitude = position.coords.longitude;
+});
+
+
 let filterone = false;
 let filtertwo = false;
 
@@ -45,23 +56,23 @@ function addDistance(distance) {
 }
 
 //event listeners
-document.getElementById("filterone").addEventListener("mouseover", mouseoverone);
-document.getElementById("filterone").addEventListener("mouseout", mouseoutone);
+document.getElementById("filterButton").addEventListener("mouseover", mouseoverone);
+document.getElementById("filterButton").addEventListener("mouseout", mouseoutone);
 
 //changes the display of first filter to block when mouseover and none when mouseout
 function mouseoverone() {
-    document.getElementById("filtertwo").style.display = "block";
+    document.getElementById("filterOptions").style.display = "block";
     filterone = true;
 }
 function mouseoutone() {
     filterone = false;
     if (!filtertwo) {
-        document.getElementById("filtertwo").style.display = "none";
+        document.getElementById("filterOptions").style.display = "none";
     }
 }
 //entire filter two section
-document.getElementById("filtertwo").addEventListener("mouseover", mouseovertwo);
-document.getElementById("filtertwo").addEventListener("mouseout", mouseouttwo);
+document.getElementById("filterOptions").addEventListener("mouseover", mouseovertwo);
+document.getElementById("filterOptions").addEventListener("mouseout", mouseouttwo);
 //closes pop up filter two
 function mouseovertwo() {
     filtertwo = true;
@@ -111,7 +122,7 @@ function sizeleave() {
 // function distancelеave() {
 //     document.getElementById("distancefilter").style.display = "none";
 // }
-document.getElementById("search").addEventListener("click", search);
+document.getElementById("searchButton").addEventListener("click", search);
 function search() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
@@ -137,7 +148,7 @@ function search() {
         }*/
     });
     
-    let input = document.getElementById("searchinput").value;
+    let input = document.getElementById("searchEngine").value;
 
     fetch("uk.php",{
         method: "POST",
