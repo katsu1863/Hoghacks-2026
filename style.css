@@ -53,6 +53,12 @@ input {
     align-items: center;
 }
 
+.searchEngineBot {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
 #searchButton {
     width: 3em;
     height: 3em;
@@ -62,6 +68,13 @@ input {
 #filterButton {
     width: 5em;
     height: 2em;
+}
+
+#filterOptions {
+    margin-left: 3px;
+    border: 0.5px solid;
+    width: 12em;
+    height: 15em;
 }
 
 #homeSearch {
