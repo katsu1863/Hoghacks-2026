@@ -8,7 +8,7 @@ $dotenv->load();
 // Validate that required variables are present
 $dotenv->required(["DB_HOST", "DB_NAME", "DB_USERNAME", "DB_PASSWORD"]);
 
-// Access variables via $_ENV or getenv()
+// Access variables via $_ENV
 $conn = new mysqli(
     $_ENV["DB_HOST"],
     $_ENV["DB_USERNAME"],
@@ -20,4 +20,5 @@ if ($conn->connect_error) {
     http_response_code(500);
     die(json_encode(["error" => "Connection failed: " . $conn->connect_error]));
 }
+// echo "Connected successfully to database."
 ?>
