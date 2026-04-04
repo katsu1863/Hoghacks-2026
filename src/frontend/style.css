@@ -170,6 +170,9 @@ input {
 }
 
 #map {
+    border: 1em solid #77CBB9;
+    border-radius: 20px;
+    overflow: hidden;
     height: 70vh;
     width: 60vw;
     margin-left: auto;
