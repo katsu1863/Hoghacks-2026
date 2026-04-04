@@ -1,10 +1,12 @@
 document.getElementById("login").addEventListener("click", function() {
+
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
     let accepted = false;
 
-    fetch("login.php", {
+    fetch("verify_user.php", {
+        database,
         method: "POST",
         headers: {
             "Content-Type": "application/json",
