@@ -25,5 +25,10 @@ CREATE TABLE Users (
     PRIMARY KEY (username, user_password)
 );
 
--- Tests
+-- Test Cases
 INSERT INTO Users VALUES ("mrpepsi", "12345");
+INSERT INTO Users VALUES ("whisperingcoder", "23456")
+INSERT INTO Users VALUES ("lemdog", "34567")
+INSERT INTO Users VALUES ("kcudzich", "45678")
+INSERT INTO Users VALUES ("kitkat", "56789")
+INSERT INTO Users VALUES ("katsu18", "67890")
