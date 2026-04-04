@@ -1,5 +1,8 @@
 -- Schema for MyScene MySQL database
 
+CREATE DATABASE MyScene;
+USE MyScene;
+
 CREATE TABLE Artists (
     id INT PRIMARY KEY,
     artist_name VARCHAR(40) NOT NULL,
