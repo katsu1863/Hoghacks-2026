@@ -17,15 +17,15 @@ $insta_handle    = $data["insta_handle"]    ?? "";
 $image_src       = $data["image_src"]       ?? "";
 
 // Validate required fields
-if(empty($artist_name) || empty(location_city) || empty(location_region) || empty("music_genre")) {
+if(empty($artist_name) || empty($location_city) || empty($location_region) || empty($music_genre)) {
     http_response_code(400);
     echo json_encode(["error" => "Artist name, city, region, and music genre are required field."]);
     exit;
 }
 
 $stmt = $conn->prepare("
-    INSERT INTO Artist (artist_name, location_city, location_region, music_genre, insta_handle, image_src)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO Artists (artist_name, location_city, location_region, music_genre, insta_handle, image_src)
+    VALUES (?, ?, ?, ?, ?, ?)
 ");
 
 $stmt->bind_param("ssssss",
