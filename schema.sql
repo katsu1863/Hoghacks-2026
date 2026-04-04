@@ -40,3 +40,4 @@ INSERT INTO Artists VALUES (NULL, "Resting", "Springdale", "AR", NULL, NULL, "Al
 INSERT INTO Artists VALUES (NULL, "Ozark Riviera", "Fayetteville", "AR", NULL, NULL, "Indie", "@ozark.riviera", NULL);
 INSERT INTO Artists VALUES (NULL, "Burn Absolute", "Tampa", "FL", NULL, NULL, "Metal", "@burnabsolute", "burnabsolute.png");
 INSERT INTO Artists VALUES (NULL, "Dawn of Ascension", "El Dorado", "AR", NULL, NULL, "Metal", "@dawnofascensionband", "dawnofascensionband.png");
+INSERT INTO Artists VALUES (NULL, "Ted Hammig and the Campaign", "Fayetteville", "AR", NULL, NULL, "Rock", "@tedhammigandthecampaign", NULL);
