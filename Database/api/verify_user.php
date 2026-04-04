@@ -13,7 +13,7 @@ if (empty($username) || empty($password)) {
     exit;
 }
 
-$stmt = $conn->prepare("SELECT * FROM Users WHERE username = ? AND password = ?");
+$stmt = $conn->prepare("SELECT * FROM Users WHERE username = ? AND user_password = ?");
 $stmt->bind_param("ss", $username, $password);
 $stmt->execute();
 $stmt->store_result();

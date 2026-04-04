@@ -24,3 +24,6 @@ CREATE TABLE Users (
 
     PRIMARY KEY (username, user_password)
 );
+
+-- Tests
+INSERT INTO Users VALUES ("mrpepsi", "12345");
