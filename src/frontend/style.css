@@ -446,13 +446,13 @@ footer {
     background: white;
 }
 
-.artistCard h2 {
+.artist-info h2 {
     margin: 0 0 4px;
     font-size: 16 px;
 
 }
 
-.artistCard p {
+.artist-info p {
     margin: 0 0 4px;
     font-size: 13 px;
     color: #666;
