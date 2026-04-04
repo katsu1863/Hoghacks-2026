@@ -3,8 +3,6 @@ document.getElementById("login").addEventListener("click", function() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    let accepted = false;
-
     fetch("../backend/db-api/verify_user.php", {
         method: "POST",
         headers: {
@@ -16,11 +14,9 @@ document.getElementById("login").addEventListener("click", function() {
         })
     }).then(response => response.json())
       .then(data => {
-          accepted = data.accepted;
-
-          //redirect to main page
-          //else show error message
-          if (accepted) {
+          // Redirect to main page
+          // Else show error message
+          if (data.verified) {
               window.location.href = "main.html";
           } else {
               alert("Invalid username or password");
