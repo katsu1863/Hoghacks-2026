@@ -11,7 +11,7 @@ $dotenv->required(["DB_HOST", "DB_NAME", "DB_USERNAME", "DB_PASSWORD"]);
 // Access variables via $_ENV or getenv()
 $conn = new mysqli(
     $_ENV["DB_HOST"],
-    $_ENV["DB_USER"],
+    $_ENV["DB_USERNAME"],
     $_ENV["DB_PASSWORD"],
     $_ENV["DB_NAME"]
 );
