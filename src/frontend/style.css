@@ -26,6 +26,10 @@ label {
     height: 2em;
 }
 
+input:focus {
+    outline: none;
+  }
+
 h1, h2, h3 {
     font-family: "Concert One";
 }
@@ -374,5 +378,78 @@ footer {
             width: 7em;
             height: 5.65em;
             margin: 0;
+            background-color: ;
             padding-left: 30px;
         }
+
+#artistHeader {
+    width: 65em;
+    height: 10em;
+    margin: auto;
+    background-color: #506C64;
+
+    display: flex;
+    align-items: center; /* Vertical center */
+    /* justify-content: center; Horizontal center (optional) */
+}
+
+#artistHeader h2,p {
+    padding-left: 1em;
+    line-height: 0.1em;
+}
+
+#artistInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#artistButtons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32em;
+}
+
+#artistStats {
+    display: flex;
+    /* flex-direction: row; */
+    /* gap: 2em; */
+    justify-content: center;
+}
+
+.statBox {
+    margin: 35px;
+    width: 35em;
+    height: auto;
+    background-color: #506C64;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.statBox p,
+.statBox h2 {
+    text-align: center;
+    line-height: 25px;
+}
+
+
+#artistButtons button {
+    width: 9em;
+    height: 2em;
+    margin: 0.5em;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+#artistHeader p {
+    padding-left: 1.5em;
+}
+
+#artistPic {
+    margin-left: 1em;
+    width: 8.5em;
+    height: 8.5em;
+    border-radius: 50%;
+   
+}
