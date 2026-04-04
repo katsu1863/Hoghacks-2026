@@ -59,7 +59,7 @@ function displayArtists(artists) {
 
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = artists.map(artist => `
-        <div class="artist-card">
+        <div class="artistCard">
             <div class = "artist-info">
                 <h2>${artist.artist_name}</h2>
                 <p>Genre:${artist.music_genre}</p>
