@@ -22,5 +22,5 @@ git clone https://github.com/katsu1863/Hoghacks-2026.git
 cd HogHacks-2026
 ```
 - Run `./install.sh` to install necessary packages
-- Start a local PHP web server by running `php -S localhost:8000`
+- Start a local PHP web server by running `php -S localhost:8000` from the home directory of HogHacks-2026
 - Navigate to `http://localhost:8000/src/frontend/login.html` on a Web browser

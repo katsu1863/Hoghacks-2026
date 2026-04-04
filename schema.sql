@@ -1,5 +1,4 @@
 -- Schema for MyScene MySQL database
-
 CREATE DATABASE IF NOT EXISTS MyScene;
 USE MyScene;
 
@@ -19,11 +18,16 @@ CREATE TABLE Artists (
 );
 
 CREATE TABLE Users (
-    username VARCHAR(10) NOT NULL,
+    username VARCHAR(20) NOT NULL,
     user_password VARCHAR(20) NOT NULL,
 
     PRIMARY KEY (username, user_password)
 );
 
--- Tests
+-- Test Cases
 INSERT INTO Users VALUES ("mrpepsi", "12345");
+INSERT INTO Users VALUES ("whisperingcoder", "23456");
+INSERT INTO Users VALUES ("lemdog", "34567");
+INSERT INTO Users VALUES ("kcudzich", "45678");
+INSERT INTO Users VALUES ("kitkat", "56789");
+INSERT INTO Users VALUES ("katsu18", "67890");
